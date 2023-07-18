@@ -1,0 +1,121 @@
+.contenido {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.pelicula {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pelicula .informacion {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imagen img {
+    width: 220px;
+    
+}
+
+.pelicula a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#puntuacion {
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+    font-size: 30px;
+}
+
+.pelicula h2 {
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+.descripcion {
+    width: 1000px;
+    height: auto;
+}
+
+.elementos {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top:  solid 2px;
+
+}
+
+.elementos h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton button{
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+.boton {
+    width: 1000px;
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;	
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: brown;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;   
+}
+
+.boton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.boton:hover {background-color: #3e8e41}
+
+.boton button {
+    cursor: pointer;
+}
+.imagen img{
+    box-shadow: 0px -1px 5px 5px rgba(0, 0, 0, 0.384);
+}
+.informacion p{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 1px ;
+}
+
+.informacion {
+    border-top: solid 2px;
+}

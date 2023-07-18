@@ -1,0 +1,47 @@
+<nav>
+  <h1>peliculas</h1>
+
+  <div class="buscador">
+    <input
+      type="text"
+      placeholder="Ingrese el nombre de la película"
+      [(ngModel)]="nombre_pelicula"
+    />
+    <a (click)="obtenerPeliculas()"
+      ><img src="../../../assets/magnifier.png" alt=""
+    /></a>
+  </div>
+  <a href="">home</a>
+</nav>
+<div class="slider">
+  <ul>
+    <li><img src="https://fondosmil.com/fondo/12750.jpg" alt="" /></li>
+    <li><img src="https://www.10wallpaper.com/wallpaper/2560x1600/1704/Guardians_of_the_Galaxy_Vol_2_Movies_HD_Wallpaper_07_2560x1600.jpg" alt="" /></li>
+    <li><img src="https://www.leawo.com/blog/wp-content/uploads/2009/12/avatar1.jpg" alt="" /></li>
+    <li>
+      <img
+        src="https://w0.peakpx.com/wallpaper/632/28/HD-wallpaper-aquaman-2018-aquaman-movie-aquaman-movies-2018-movies-jason-momoa.jpg"
+        alt=""
+      />
+    </li>
+  </ul>
+</div>
+
+<div class="contenido">
+  <h1>PELÍCULAS</h1>
+
+  <div class="peliculas">
+    <div class="error" *ngIf="error">
+      <p>{{ error }}</p>
+    </div>
+    <div class="pelicula" *ngFor="let pelicula of peliculas">
+      <div class="titulo">
+        <h2>{{ pelicula.Title }}</h2>
+      </div>
+      <img [src]="pelicula.Poster" alt="pelicula.Title" />
+      <p>{{ pelicula.Year }}</p>
+      <a href="#">{{ pelicula.Type }}</a>
+      <button (click)="verPelicula(pelicula.imdbID)"> <img src="../../../assets/circulo-de-flecha.png" alt=""> Ver película </button>
+    </div>
+  </div>
+</div>

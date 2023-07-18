@@ -1,0 +1,34 @@
+
+
+<div class="contenido">
+    <div class="boton">
+        <button (click)="regresar()">Regresar</button>
+    </div>
+    <div class="pelicula" *ngIf="pelicula">
+        <div class="imagen">
+            <img [src]="pelicula.Poster" alt="pelicula.Title">
+        </div>
+        <div class="informacion">
+            <h2>{{pelicula.Title}}</h2>
+            <a href="#">{{pelicula.Type}}</a>
+            <p id="puntuacion">{{pelicula.imdbRating}}</p>
+            <p> <strong>Género: </strong>{{pelicula.Genre}}</p>
+            <p> <strong>Duración:</strong> {{pelicula.Runtime}}</p>
+            <p> <strong>Idioma: </strong>{{pelicula.Language}}</p>
+            <p> <strong>Año: </strong>{{pelicula.Year}}</p>
+            <p> <strong>Fecha de estreno:</strong> {{pelicula.Released}}</p>
+        </div>
+    </div>
+    <div class="descripcion" *ngIf="pelicula">
+        <p>{{pelicula.Plot}}</p>
+    </div>
+
+    <div class="elementos" *ngIf="pelicula">
+        <h3>Más información</h3>
+        <ul>
+            <li> <strong>Director: </strong> {{pelicula.Director}}</li>
+            <li> <strong>Escritor: </strong> {{pelicula.Writer}}</li>
+            <li> <strong>Premios: </strong>{{pelicula.Awards}}</li>
+        </ul>
+    </div>
+</div>
